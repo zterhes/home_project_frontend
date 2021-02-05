@@ -11,11 +11,15 @@ import Home from "./pages/home"
 import Plans from './pages/plans'
 import PlanPage from "./pages/planPage"
 import TrainingPage from "./pages/training"
+import GymTrainer from "./pages/gymTrainer"
 
 function App() {
   return (
     <Router>
       <Switch>
+      <Route path='/gymTraining'>
+          <GymTrainer></GymTrainer>
+        </Route>
         <Route path='/training'>
           <TrainingPage></TrainingPage>
         </Route>

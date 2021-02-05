@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import styled from "styled-components"
 import defaultImg from "../img/dumbbell.png"
 import smallRestIcon from "../img/relaxing.png"
@@ -70,29 +71,39 @@ export default ({ exercise }) => {
         repPath = smallRepIcon
     }
     return (
-        <Card>
-            <TitleDiv>
-                <Icon src={imgPath}></Icon>
-                <Title className="text-white">{exercise_title}</Title>
-            </TitleDiv>
-            <Details>
-                <div>
-                    <CountSet>12 ismétlés</CountSet>
-                </div>
-                <div>
-                    <RestDiv>
-                        <div>
-                            <Img src={restPath}></Img>
-                            <RestText>rest: {restBetweenSets}</RestText>
-                        </div>
-                        <div>
-                            <Img src={repPath}></Img>
-                            <RestText>sets: 4</RestText>
-                        </div>
-                    </RestDiv>
-                </div>
-            </Details>
-        </Card>
+        <Link
+            className='link'
+            to={{
+                pathname: "/gymTraining",
+                state: exercise
+            }}>
+
+
+            <Card>
+                <TitleDiv>
+                    <p>{workTime}</p>
+                    <Icon src={imgPath}></Icon>
+                    <Title className="text-white">{exercise_title}</Title>
+                </TitleDiv>
+                <Details>
+                    <div>
+                        <CountSet>12 ismétlés</CountSet>
+                    </div>
+                    <div>
+                        <RestDiv>
+                            <div>
+                                <Img src={restPath}></Img>
+                                <RestText>rest: {restBetweenSets}</RestText>
+                            </div>
+                            <div>
+                                <Img src={repPath}></Img>
+                                <RestText>sets: 4</RestText>
+                            </div>
+                        </RestDiv>
+                    </div>
+                </Details>
+            </Card>
+        </Link>
 
     );
 }

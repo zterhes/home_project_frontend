@@ -33,7 +33,7 @@ animation: ${rotate360} infinite 15s linear;
   }
     `
 
-const TitleDiv=styled.div`
+const TitleDiv = styled.div`
 display:flex;
 justify-content:space-around;
 padding-top:4vw;
