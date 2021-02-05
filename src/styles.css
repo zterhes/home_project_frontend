@@ -1,0 +1,17 @@
+.link{
+    display: flex;
+    justify-content: center;
+}
+
+.modal-background{
+    background: #d9534f;
+}
+
+::placeholder{
+    color: white;
+    opacity: 0.5;
+}
+
+body{
+    min-height: 100vh;
+}
